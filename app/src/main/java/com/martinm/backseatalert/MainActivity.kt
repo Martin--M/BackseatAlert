@@ -1,4 +1,4 @@
-package com.example.backseatalert
+package com.martinm.backseatalert
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.backseatalert.ui.theme.BackseatAlertTheme
+import com.martinm.backseatalert.ui.theme.BackseatAlertTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

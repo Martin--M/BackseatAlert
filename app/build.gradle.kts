@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.backseatalert"
+    namespace = "com.martinm.backseatalert"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.backseatalert"
+        applicationId = "com.martinm.backseatalert"
         minSdk = 36
         targetSdk = 36
         versionCode = 1

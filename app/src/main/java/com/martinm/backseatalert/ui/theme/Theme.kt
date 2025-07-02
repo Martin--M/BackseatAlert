@@ -1,6 +1,5 @@
-package com.example.backseatalert.ui.theme
+package com.martinm.backseatalert.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

@@ -1,4 +1,4 @@
-package com.example.backseatalert
+package com.martinm.backseatalert
 
 import org.junit.Test
 

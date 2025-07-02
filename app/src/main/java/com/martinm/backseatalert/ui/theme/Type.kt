@@ -1,4 +1,4 @@
-package com.example.backseatalert.ui.theme
+package com.martinm.backseatalert.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
