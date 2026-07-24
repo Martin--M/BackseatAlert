@@ -13,6 +13,8 @@ import androidx.core.app.NotificationCompat
 import com.martinm.backseatalert.MainActivity
 import com.martinm.backseatalert.data.recognition.AlarmReceiver
 
+import com.martinm.backseatalert.R
+
 object AlertManager {
     private const val NOTIFICATION_ID = 911
     private const val CHANNEL_ID = "backseat_alert_channel"
@@ -58,10 +60,10 @@ object AlertManager {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 CHANNEL_ID,
-                "Backseat Safety Reminder",
+                context.getString(R.string.notification_channel_name),
                 NotificationManager.IMPORTANCE_HIGH
             ).apply {
-                description = "Critical alerts to check the backseat"
+                description = context.getString(R.string.notification_channel_description)
                 enableVibration(true)
                 setVibrationPattern(vibrationPattern)
                 setSound(
@@ -95,8 +97,8 @@ object AlertManager {
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(android.R.drawable.ic_dialog_alert)
-            .setContentTitle("Backseat Safety Reminder!")
-            .setContentText("Did you check the back seat for your baby?")
+            .setContentTitle(context.getString(R.string.notification_title))
+            .setContentText(context.getString(R.string.notification_text))
             .setPriority(NotificationCompat.PRIORITY_MAX)
             .setCategory(NotificationCompat.CATEGORY_ALARM)
             .setSound(soundUri)
@@ -104,7 +106,7 @@ object AlertManager {
             .setOngoing(true)
             .setAutoCancel(false)
             .setContentIntent(contentPendingIntent)
-            .addAction(android.R.drawable.ic_menu_close_clear_cancel, "Dismiss Alert", dismissPendingIntent)
+            .addAction(android.R.drawable.ic_menu_close_clear_cancel, context.getString(R.string.action_dismiss_alert), dismissPendingIntent)
             .build()
 
         notificationManager.notify(NOTIFICATION_ID, notification)

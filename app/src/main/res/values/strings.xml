@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">BackseatAlert</string>
+
+    <!-- Screen titles -->
+    <string name="title_main">Backseat Alert</string>
+    <string name="title_settings">Settings</string>
+
+    <!-- Detection Status -->
+    <string name="status_detection_active">DETECTION ACTIVE</string>
+    <string name="status_detection_inactive">DETECTION INACTIVE</string>
+    <string name="description_detection_active">Monitoring when you exit a vehicle to remind you of passengers in the backseat.</string>
+
+    <!-- Permissions Warning -->
+    <string name="title_permissions_required">Permissions Required</string>
+    <string name="description_permissions_required">To detect driving activities and post notification alerts, grant the requested permissions.</string>
+    <string name="button_grant_permissions">Grant Permissions</string>
+    <string name="content_description_warning">Warning</string>
+
+    <!-- Battery Optimization -->
+    <string name="title_battery_optimization">Battery Optimization is Enabled</string>
+    <string name="description_battery_optimization">Android may put this app to sleep, preventing vehicle detection. Exclude it from battery optimization to ensure reliability.</string>
+    <string name="button_disable_optimization">Disable Optimization</string>
+    <string name="content_description_battery_warning">Battery Warning</string>
+    <string name="status_battery_optimization_disabled">Battery optimizations disabled (Unrestricted)</string>
+    <string name="content_description_battery_disabled">Battery Optimization Disabled</string>
+
+    <!-- Actions -->
+    <string name="button_test_alert">Test Alert Notification</string>
+    <string name="label_enable_detection">Enable detection</string>
+    <string name="button_back">Back</string>
+
+    <!-- Notifications & Alarms -->
+    <string name="notification_channel_name">Backseat Safety Reminder</string>
+    <string name="notification_channel_description">Critical alerts to check the backseat</string>
+    <string name="notification_title">Backseat Safety Reminder!</string>
+    <string name="notification_text">Did you check the back seat for your baby?</string>
+    <string name="action_dismiss_alert">Dismiss Alert</string>
 </resources>

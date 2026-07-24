@@ -13,9 +13,11 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.martinm.backseatalert.R
 
 @Composable
 fun SettingsScreen(
@@ -26,7 +28,7 @@ fun SettingsScreen(
 
     Column(Modifier.padding(24.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Text("Enable detection")
+            Text(stringResource(R.string.label_enable_detection))
             Spacer(Modifier.weight(1f))
             Switch(checked = uiState.isEnabled, onCheckedChange = {
                 viewModel.setEnabled(it)
@@ -34,7 +36,7 @@ fun SettingsScreen(
         }
         Spacer(Modifier.height(24.dp))
         Button(onClick = { navController.popBackStack() }) {
-            Text("Back")
+            Text(stringResource(R.string.button_back))
         }
     }
 }

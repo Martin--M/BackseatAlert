@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BackseatAlert</string>
+    
+    <!-- Screen titles -->
+    <string name="title_main">Backseat Alert</string>
+    <string name="title_settings">Paramètres</string>
+
+    <!-- Detection Status -->
+    <string name="status_detection_active">DÉTECTION ACTIVE</string>
+    <string name="status_detection_inactive">DÉTECTION INACTIVE</string>
+    <string name="description_detection_active">Surveillance du moment où vous sortez d’un véhicule pour vous rappeler de vérifier les passagers sur la banquette arrière.</string>
+
+    <!-- Permissions Warning -->
+    <string name="title_permissions_required">Autorisations requises</string>
+    <string name="description_permissions_required">Pour détecter les déplacements en véhicule et afficher les alertes de notification, veuillez accorder les autorisations demandées.</string>
+    <string name="button_grant_permissions">Accorder les autorisations</string>
+    <string name="content_description_warning">Avertissement</string>
+
+    <!-- Battery Optimization -->
+    <string name="title_battery_optimization">L’optimisation de la batterie est activée</string>
+    <string name="description_battery_optimization">Android pourrait mettre cette application en veille, empêchant la détection de sortie du véhicule. Excluez-la des optimisations de la batterie pour garantir son fonctionnement.</string>
+    <string name="button_disable_optimization">Désactiver l’optimisation</string>
+    <string name="content_description_battery_warning">Avertissement d’optimisation de la batterie</string>
+    <string name="status_battery_optimization_disabled">Optimisation de la batterie désactivée (non restreinte)</string>
+    <string name="content_description_battery_disabled">Optimisation de la batterie désactivée</string>
+
+    <!-- Actions -->
+    <string name="button_test_alert">Tester la notification d’alerte</string>
+    <string name="label_enable_detection">Activer la détection</string>
+    <string name="button_back">Retour</string>
+
+    <!-- Notifications & Alarms -->
+    <string name="notification_channel_name">Rappel de sécurité - Banquette arrière</string>
+    <string name="notification_channel_description">Alertes critiques pour vérifier la banquette arrière</string>
+    <string name="notification_title">Rappel de sécurité - Banquette arrière!</string>
+    <string name="notification_text">Avez-vous vérifié la banquette arrière pour votre enfant?</string>
+    <string name="action_dismiss_alert">Ignorer l’alerte</string>
+</resources>

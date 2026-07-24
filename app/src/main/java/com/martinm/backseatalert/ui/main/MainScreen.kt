@@ -42,10 +42,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
+import com.martinm.backseatalert.R
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -104,7 +106,7 @@ fun MainScreen(navController: NavController, viewModel: MainViewModel = hiltView
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Backseat Alert", fontWeight = FontWeight.Bold) },
+                title = { Text(stringResource(R.string.title_main), fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer
@@ -135,7 +137,11 @@ fun MainScreen(navController: NavController, viewModel: MainViewModel = hiltView
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(
-                        text = if (uiState.isEnabled && hasPermissions) "DETECTION ACTIVE" else "DETECTION INACTIVE",
+                        text = if (uiState.isEnabled && hasPermissions) {
+                            stringResource(R.string.status_detection_active)
+                        } else {
+                            stringResource(R.string.status_detection_inactive)
+                        },
                         fontWeight = FontWeight.Bold,
                         fontSize = 18.sp,
                         color = if (uiState.isEnabled && hasPermissions) {
@@ -146,7 +152,7 @@ fun MainScreen(navController: NavController, viewModel: MainViewModel = hiltView
                     )
                     Spacer(Modifier.height(8.dp))
                     Text(
-                        text = "Monitoring when you exit a vehicle to remind you of passengers in the backseat.",
+                        text = stringResource(R.string.description_detection_active),
                         fontSize = 14.sp,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -183,18 +189,18 @@ fun MainScreen(navController: NavController, viewModel: MainViewModel = hiltView
                     ) {
                         Icon(
                             imageVector = Icons.Filled.Warning,
-                            contentDescription = "Warning",
+                            contentDescription = stringResource(R.string.content_description_warning),
                             tint = MaterialTheme.colorScheme.onErrorContainer
                         )
                         Spacer(Modifier.width(16.dp))
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                "Permissions Required",
+                                stringResource(R.string.title_permissions_required),
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.onErrorContainer
                             )
                             Text(
-                                "To detect driving activities and post notification alerts, grant the requested permissions.",
+                                stringResource(R.string.description_permissions_required),
                                 fontSize = 12.sp,
                                 color = MaterialTheme.colorScheme.onErrorContainer
                             )
@@ -205,7 +211,7 @@ fun MainScreen(navController: NavController, viewModel: MainViewModel = hiltView
                                     containerColor = MaterialTheme.colorScheme.error
                                 )
                             ) {
-                                Text("Grant Permissions", color = Color.White)
+                                Text(stringResource(R.string.button_grant_permissions), color = Color.White)
                             }
                         }
                     }
@@ -226,18 +232,18 @@ fun MainScreen(navController: NavController, viewModel: MainViewModel = hiltView
                     ) {
                         Icon(
                             imageVector = Icons.Filled.Warning,
-                            contentDescription = "Battery Warning",
+                            contentDescription = stringResource(R.string.content_description_battery_warning),
                             tint = MaterialTheme.colorScheme.onTertiaryContainer
                         )
                         Spacer(Modifier.width(16.dp))
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                "Battery Optimization is Enabled",
+                                stringResource(R.string.title_battery_optimization),
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.onTertiaryContainer
                             )
                             Text(
-                                "Android may put this app to sleep, preventing vehicle detection. Exclude it from battery optimization to ensure reliability.",
+                                stringResource(R.string.description_battery_optimization),
                                 fontSize = 12.sp,
                                 color = MaterialTheme.colorScheme.onTertiaryContainer
                             )
@@ -248,7 +254,7 @@ fun MainScreen(navController: NavController, viewModel: MainViewModel = hiltView
                                     containerColor = MaterialTheme.colorScheme.tertiary
                                 )
                             ) {
-                                Text("Disable Optimization")
+                                Text(stringResource(R.string.button_disable_optimization))
                             }
                         }
                     }
@@ -266,12 +272,12 @@ fun MainScreen(navController: NavController, viewModel: MainViewModel = hiltView
                     ) {
                         Icon(
                             imageVector = Icons.Filled.CheckCircle,
-                            contentDescription = "Battery Optimization Disabled",
+                            contentDescription = stringResource(R.string.content_description_battery_disabled),
                             tint = MaterialTheme.colorScheme.onSecondaryContainer
                         )
                         Spacer(Modifier.width(16.dp))
                         Text(
-                            "Battery optimizations disabled (Unrestricted)",
+                            stringResource(R.string.status_battery_optimization_disabled),
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 13.sp,
                             color = MaterialTheme.colorScheme.onSecondaryContainer
@@ -291,7 +297,7 @@ fun MainScreen(navController: NavController, viewModel: MainViewModel = hiltView
                     containerColor = MaterialTheme.colorScheme.primary
                 )
             ) {
-                Text("Test Alert Notification", fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                Text(stringResource(R.string.button_test_alert), fontSize = 16.sp, fontWeight = FontWeight.Bold)
             }
         }
     }
