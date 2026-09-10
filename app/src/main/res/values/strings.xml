@@ -29,6 +29,13 @@
     <string name="label_enable_detection">Enable detection</string>
     <string name="button_back">Back</string>
 
+    <!-- About Section & Disclaimers -->
+    <string name="title_about">About &amp; Legal Disclaimers</string>
+    <string name="label_version">Version %1$s</string>
+    <string name="title_disclaimer">Safety &amp; Legal Disclaimer</string>
+    <string name="text_disclaimer">BackseatAlert is a secondary assistance tool designed to remind drivers to check the rear seat. It relies on device sensors and automated activity recognition, which may not be 100%% accurate due to hardware limits, battery optimization, or system constraints. This app DOES NOT replace full adult responsibility, vigilance, and care. Never leave children or pets unattended in a vehicle.</string>
+    <string name="text_privacy_note">Your privacy is important to us. Sensor and location data used for vehicle activity recognition are processed locally on your device and are never sold or transmitted to external servers.</string>
+
     <!-- Notifications & Alarms -->
     <string name="notification_channel_name">Backseat Safety Reminder</string>
     <string name="notification_channel_description">Critical alerts to check the backseat</string>

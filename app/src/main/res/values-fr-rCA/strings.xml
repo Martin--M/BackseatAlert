@@ -30,6 +30,13 @@
     <string name="label_enable_detection">Activer la détection</string>
     <string name="button_back">Retour</string>
 
+    <!-- About Section & Disclaimers -->
+    <string name="title_about">À propos et avis juridiques</string>
+    <string name="label_version">Version %1$s</string>
+    <string name="title_disclaimer">Avis de sécurité et responsabilité</string>
+    <string name="text_disclaimer">BackseatAlert est un outil d’assistance secondaire conçu pour rappeler aux conducteurs de vérifier la banquette arrière. L’application s’appuie sur les capteurs de l’appareil et la reconnaissance automatique des activités, qui peuvent ne pas être fiables à 100 %% en raison des limites matérielles, des optimisations de la batterie ou des contraintes du système. Cette application NE REMPLACE EN AUCUN CAS la vigilance, la responsabilité et l’attention constante des adultes. Ne laissez jamais un enfant ou un animal sans surveillance dans un véhicule.</string>
+    <string name="text_privacy_note">La protection de votre vie privée est essentielle. Les données relatives aux capteurs et à la détection des activités sont traitées localement sur votre appareil et ne sont jamais vendues ni transmises à des serveurs externes.</string>
+
     <!-- Notifications & Alarms -->
     <string name="notification_channel_name">Rappel de sécurité - Banquette arrière</string>
     <string name="notification_channel_description">Alertes critiques pour vérifier la banquette arrière</string>
